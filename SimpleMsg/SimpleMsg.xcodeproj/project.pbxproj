@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4355FBA007A3BCAEF188ED3C /* Pods_SimpleMsg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED28D9458F5B509CBDD8828 /* Pods_SimpleMsg.framework */; };
 		EA08553421DF8A98007267BF /* SimpleMsg.h in Headers */ = {isa = PBXBuildFile; fileRef = EA08553221DF8A98007267BF /* SimpleMsg.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA08553B21DF8AF0007267BF /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA08553A21DF8AF0007267BF /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		526A4E5DCCE635FAE936AD8B /* Pods-SimpleMsg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMsg.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleMsg/Pods-SimpleMsg.debug.xcconfig"; sourceTree = "<group>"; };
+		5F24AA9E926BB35658C3FFF2 /* Pods-SimpleMsg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMsg.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleMsg/Pods-SimpleMsg.release.xcconfig"; sourceTree = "<group>"; };
 		EA08552F21DF8A98007267BF /* SimpleMsg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimpleMsg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA08553221DF8A98007267BF /* SimpleMsg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleMsg.h; sourceTree = "<group>"; };
 		EA08553321DF8A98007267BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA08553A21DF8AF0007267BF /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		FED28D9458F5B509CBDD8828 /* Pods_SimpleMsg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleMsg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -23,17 +27,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4355FBA007A3BCAEF188ED3C /* Pods_SimpleMsg.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D134B200B601931DCE1FB11 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FED28D9458F5B509CBDD8828 /* Pods_SimpleMsg.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D7F0F8A3B216440174BF311 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				526A4E5DCCE635FAE936AD8B /* Pods-SimpleMsg.debug.xcconfig */,
+				5F24AA9E926BB35658C3FFF2 /* Pods-SimpleMsg.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EA08552521DF8A97007267BF = {
 			isa = PBXGroup;
 			children = (
 				EA08553121DF8A98007267BF /* SimpleMsg */,
 				EA08553021DF8A98007267BF /* Products */,
+				9D7F0F8A3B216440174BF311 /* Pods */,
+				1D134B200B601931DCE1FB11 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +97,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA08553721DF8A98007267BF /* Build configuration list for PBXNativeTarget "SimpleMsg" */;
 			buildPhases = (
+				274D4E6AC0EBF892C1B014D0 /* [CP] Check Pods Manifest.lock */,
 				EA08552A21DF8A98007267BF /* Headers */,
 				EA08552B21DF8A98007267BF /* Sources */,
 				EA08552C21DF8A98007267BF /* Frameworks */,
@@ -128,6 +153,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		274D4E6AC0EBF892C1B014D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleMsg-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EA08552B21DF8A98007267BF /* Sources */ = {
@@ -265,6 +311,7 @@
 		};
 		EA08553821DF8A98007267BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 526A4E5DCCE635FAE936AD8B /* Pods-SimpleMsg.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -275,6 +322,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SimpleMsg/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -291,6 +339,7 @@
 		};
 		EA08553921DF8A98007267BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F24AA9E926BB35658C3FFF2 /* Pods-SimpleMsg.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -301,6 +350,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SimpleMsg/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
